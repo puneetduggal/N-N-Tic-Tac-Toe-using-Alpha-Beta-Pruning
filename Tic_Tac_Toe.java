@@ -19,6 +19,8 @@ class Matrix{
 		}
 		score=0;
 	}
+	
+	// print function is used to print the matrix
 
 	void print(int[][] matrix,int size){
 		for(int i=0;i<size;i++){
@@ -45,6 +47,8 @@ class Matrix{
 			System.out.println("");
 		}
 	}
+	
+	// full function tells whether matrix is has any empty spaces or not . If no empty space then return true else false.
 
 	boolean full(int[][] matrix,int size){
 		for(int i=0;i<size;i++){
@@ -56,6 +60,8 @@ class Matrix{
 		}
 		return true;
 	}
+	
+	// check function checks whether there is n consecutive marks of one kind i.e. whether a person has won.
 
 	boolean check(int[][] matrix,int size,int r,int c,int val){
 		//check for row
@@ -99,6 +105,8 @@ class Matrix{
 		if(flag==0){return true;}
 		return false;
 	}
+	
+	// This is the decision tree which uses minimax algorithm and alpha beta pruning to take a decision.
 
 	Tuple decisionTree(int[][] matrix,int size,int alpha,int beta,int turn,int depth){
 		int[][] tempMatrix = new int[10][10];
@@ -176,6 +184,8 @@ class Matrix{
 		}
 		return main_tuple;
 	}
+	
+	// computes where AI should place its mark
 
 	void turnAI(int[][] matrix,int size,int[] result){
 		int[][] tempMatrix = new int[10][10];
@@ -199,6 +209,8 @@ class Matrix{
 		}
 		turnuser(matrix,size,result);
 	}
+	
+	// user function
 
 	void turnuser(int[][] matrix,int size,int[] result){
 		System.out.println("Enter your move");
